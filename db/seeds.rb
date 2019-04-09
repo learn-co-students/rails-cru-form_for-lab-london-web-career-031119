@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Artist.destroy_all
+Genre.destroy_all
+Song.destroy_all
+
+drake = Artist.create(name: "Drake", bio: "Canadian rapper")
+dre = Artist.create(name: "Dr Dre", bio: "Iconic west coast")
+last_japan = Artist.create(name: "Last Japan", bio: "London urban electronic")
+
+rap = Genre.create(name: "Rap")
+electronic = Genre.create(name: "Electronic")
+
+hotline = Song.create(name: "Hotline Bling", artist: drake, genre: rap)
+egos = Song.create(name: "Big Egos", artist: dre, genre: rap)
+acend = Song.create(name: "Ascend", artist: last_japan, genre: electronic)
