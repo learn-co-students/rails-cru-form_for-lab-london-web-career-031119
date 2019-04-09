@@ -1,0 +1,14 @@
+<h1><%= @artist.name %></h1>
+<p><%= @artist.bio %></p>
+<h3>Songs</h3>
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li><%= link_to song.name, song %></li>
+  <% end %>
+</ul>
+<h3>Genre</h3>
+<ul>
+  <% @artist.genres.each do |genre| %>
+    <li><%= link_to genre.name, genre %></li>
+  <% end %>
+</ul>
