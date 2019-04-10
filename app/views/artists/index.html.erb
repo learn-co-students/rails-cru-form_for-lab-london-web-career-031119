@@ -1,0 +1,6 @@
+<h1>Artists#index</h1>
+<% @artists.each do |artist| %>
+    <%= link_to artist.name, artist_path(artist) %>
+<% end %>
+<br/>
+<%= button_to 'new', '/artists/new', method: :get %>

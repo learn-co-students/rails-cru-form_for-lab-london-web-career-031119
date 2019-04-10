@@ -1,0 +1,6 @@
+<h1>My Artist: <%= @artist.name %></h1>
+<p>My artist bio</p>
+<h4><%= @artist.bio %></h4>
+<%= button_to 'index', '/artists', method: :get %>
+<%= button_to 'edit', "#{@artist.id}/edit", method: :get %>
+<%= button_to 'delete', @artist , method: :delete %>
