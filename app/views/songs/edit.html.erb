@@ -1,0 +1,27 @@
+<h1>Update a song</h1>
+
+<%= form_for @song do |f|%>
+  <%= f.label "Name"%>
+  <%= f.text_field :name%><br>
+
+  <%= f.label "Artist"%>
+  <%= f.text_field :artist_id%><br>
+
+  <%= f.label "Genre"%>
+  <%= f.text_field :genre_id%><br>
+
+  <%= f.submit "Update Song"%>
+
+<% end%>
+
+<hr>
+
+<p>Artists</p>
+<% @artists.each do |a|%>
+<li><%=a.id%> <%= link_to a.name, artist_path(a)%></li>
+<%end%>
+
+<p>Genres</p>
+<% @genres.each do |g|%>
+<li><%=g.id%> <%= link_to g.name, genre_path(g)%></li>
+<%end%>
